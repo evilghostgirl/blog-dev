@@ -10,7 +10,7 @@
       </div>
       <div class="card-image" v-else>
         <g-link :to="`${post.path}/`">
-          <g-image src="~/assets/images/no-image.jpg" alt="No photo"/>
+          <g-image src="@/assets/images/no-image.jpg" alt="No photo"/>
         </g-link>
       </div>
       <div class="card-content">
@@ -38,7 +38,7 @@
       <div class=" post-info-box">
           <div class="is-pulled-left has-padding-right-10">
             <figure class="image is-48x48" v-if="post.author">
-              <g-image class="is-rounded" :src="avatar" alt="">
+              <g-image class="is-rounded" src="@/assets/images/Julia.png"  alt="X"/>
             </figure>
           </div>
 
@@ -89,10 +89,8 @@
     computed: {
       formattedPublishDate() {
         return moment(this.post.datetime).format('DD MMMM, YYYY');
-      },
-      avatar() {
-        return `/assets/images/${this.post.author.id}.png`
-      },
+      }
+
     },
     methods: {
       formatPublishDate(date) {

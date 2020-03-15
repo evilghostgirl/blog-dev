@@ -7,7 +7,7 @@
           <div class="columns  is-centered ">
             <div class="column is-half-desktop has-column-centered has-text-centered">
               <figure class="image is-128x128 is-centered">
-                <g-image class="is-rounded" :src="avatar" alt=""/>
+                <g-image class="is-rounded" src="~/assets/images/Julia.png" alt=""/>
               </figure>
 
               <h1 class="title is-size-3 has-padding-top-20">
@@ -67,12 +67,7 @@
       titleCase(str) {
         return str.replace('-', ' ').split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ')
       }
-    },
-    computed: {
-      avatar() {
-        return `/assets/images/${this.$page.author.id}.png`
-      },
-    },
+    }
   }
 
 </script>

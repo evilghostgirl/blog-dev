@@ -29,8 +29,8 @@
     <div class="section" v-if="post.cover">
       <div class="container">
         <div class="columns is-centered">
-          <div class="column">
-              <img class="is-half-height" :src="post.cover" :alt="post.title">
+          <div class="column is-half">
+              <img class="" :src="post.cover" :alt="post.title">
 
           </div>
         </div>
