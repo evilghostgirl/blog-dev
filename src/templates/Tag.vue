@@ -96,6 +96,7 @@
             content
             excerpt
             description
+            cover
             timeToRead
             author {
               id

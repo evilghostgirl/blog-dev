@@ -8,8 +8,7 @@
             <div class="level-item"><a class="title is-4" href="#">Autodydaktycznie Blog</a></div>
           </div>
           <div class="level-right"><g-link to="/author/Julia" class="level-item">Autor</g-link>
-          <a class="level-item"
-              href="#">Facebook</a>
+         
           </div>
         </div>
         <hr>

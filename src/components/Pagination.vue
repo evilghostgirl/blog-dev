@@ -5,7 +5,7 @@
     <div class="columns is-mobile">
       <div class="column">
         <g-link :to="previousPage(info.currentPage)" :class="{'is-hidden': info.currentPage == 1}"
-          class="button is-outlined is-rounded is-small"
+          class="button  is-rounded is-small is-black"
           :rel="info.currentPage == 1 ? 'nofollow' : 'prev'">
           &larr; Previous
         </g-link>
@@ -16,7 +16,7 @@
       <div class="column has-text-right">
         <g-link :to="nextPage(info.currentPage,info.totalPages)"
           :class="{'is-hidden': info.currentPage == info.totalPages}"
-          class="button is-outlined is-rounded is-small"
+          class="button is-rounded is-small is-black"
           :rel="info.currentPage == info.totalPages ? 'nofollow' : 'next'">
           Next &rarr;
         </g-link>

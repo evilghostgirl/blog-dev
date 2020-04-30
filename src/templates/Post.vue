@@ -6,9 +6,9 @@
 
     <div class="section">
       <div class="columns is-centered">
-        <div class="column is-half-tablet">
+        <div class="column is-two-thirds-tablet is-half-desktop">
 
-          <alert v-if="postIsOlderThanOneYear" class="notification is-warning">
+          <alert v-if="postIsOlderThanOneYear" class="notification">
             Ten post ma ponad rok, może być nieaktualny.
           </alert>
           <div class="content" v-html="$page.post.content" />
@@ -92,3 +92,12 @@
   }
   }
 </page-query>
+<style>
+p >  img {
+  display: block;
+  margin: auto;
+  margin-top: 3rem;
+  box-shadow: 0 0 10px 0 rgba(59, 59, 59, 0.226);
+}
+
+</style>

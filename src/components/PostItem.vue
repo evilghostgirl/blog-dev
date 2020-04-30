@@ -59,7 +59,7 @@
           </div>
       </div>
       <footer class="card-footer">
-        <g-link :to="`${post.path}/`" class="card-footer-item">Read More</g-link>
+        <g-link :to="`${post.path}/`" class="card-footer-item">Przeczytaj</g-link>
       </footer>
       <!-- Card end -->
     </div>

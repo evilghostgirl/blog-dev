@@ -2,7 +2,7 @@
   <Layout class="bg-white">
     <nav class="navbar">
       <div class="container has-text-centered has-padding-bottom-10 has-padding-top-15">
-        <a class="navbar-item " href="/">Julia Glaszka</a>
+        <a class="navbar-item has-text-weight-semibold has-text-black-bis	" href="/">Julia Glaszka</a>
       </div>
     </nav>
     <section class="section">
@@ -12,7 +12,7 @@
             <g-link to="/" class="title is-spaced ">Autodydaktycznie</g-link>
 
             <p class="subtitle has-padding-top-15">Blog o moich samodzielnych zmaganiach z nauką z różnych dziedzin IT. </p>
-            <g-link to="/author/Julia" class="button is-primary is-rounded " >O mnie</g-link>
+            <g-link to="/author/Julia" class="button is-black is-rounded " >O mnie</g-link>
           </div>
           <div class="column has-text-right has-padding-top-60-mobile"><g-image src="~/assets/images/Julia.png" alt=""/></div>
         </div>
@@ -48,7 +48,6 @@
   import PostItem from '@/components/PostItem'
   import Pagination from '@/components/Pagination'
   import Posts from '@/components/Posts'
-
 
   export default {
     components: {
@@ -111,3 +110,9 @@
     }
   }
 </static-query>
+<style> 
+.card-image > a >.g-image {
+  width: 100%;
+}
+
+</style>

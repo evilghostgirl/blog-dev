@@ -2,10 +2,10 @@ module.exports = {
   siteName: 'Autodydaktycznie. Blog o technologiach webowych i IT',
   siteDescription: "Blog o moich samodzielnych zmaganiach z nauką z różnych dziedzin IT. ",
   titleTemplate: `%s | Julia Glaszka`,
-  icon: 'src/favicon.png',
+  icon: 'static/favicon.png',
   siteUrl: 'evilghostgirl.github.io/',
   // siteUrl: 'localhost',
-  pathPrefix: '/blog',
+  // pathPrefix: '/blog',
   transformers: {
     remark: {
       externalLinksTarget: '_blank',

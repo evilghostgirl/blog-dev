@@ -2,6 +2,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 import '~/assets/scss/main.scss'
 import 'bulma-helpers/css/bulma-helpers.min.css'
 
+
 export default function (Vue, { head }) {
   Vue.component('Layout', DefaultLayout)
 
@@ -29,6 +30,12 @@ export default function (Vue, { head }) {
     content: '#261447'
   })
 
+//favicon
+  // head.link.push({
+  //   href: 'images/favicon.ico',
+  //   rel: 'icon',
+  //   type: 'image/x-icon'
+  // })
 
   head.meta.push({
     name: 'viewport',

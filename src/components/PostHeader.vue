@@ -29,7 +29,7 @@
     <div class="section" v-if="post.cover">
       <div class="container">
         <div class="columns is-centered">
-          <div class="column is-half">
+          <div class="column image-container">
               <img class="" :src="post.cover" :alt="post.title">
 
           </div>
@@ -49,7 +49,13 @@
     width: 100%;
     max-width: 100%;
   }
-
+  .image-container {
+    justify-content: center;
+    display: flex;
+  }
+img {
+  margin: auto;
+}
 </style>
 <script>
   import moment from 'moment'
