@@ -27,6 +27,7 @@ Na potrzeby zabawy postawimy sobie 2 kontenery dockerowe z elasticem + kibaną. 
 * 1 kontener z kibaną w wersji 7.6.0
 * 2 woluminy, na których będą przechowywane dane
 * sieć o nazwie elastic-network
+
 Wersje nie są najnowsze, ale akurat miałam te obrazy lokalnie na komputerze. Można w razie czego zmienić na nowszą.
 
 ``` yml
@@ -84,11 +85,11 @@ Powinny się nam pojawić 2 działajace kontenery. Jeśli tak, to fajnie. :)
 
 ### Model danych
 Zanim cokolwiek ciekawego zaczniemy robić, musimy zamodelować nasze dane. 
-``` 
-              "title": "text"
-               "description": "text"
-               "location":"geo_point"
-               "price": "double"
+```yml
+    "title": "text"
+    "description": "text"
+    "location":"geo_point"
+    "price": "double"
 ```
 
 Idziemy w maksymalne uproszczenie schematu. Myślę, że model jest dość czytelny. Id zostanie dodane automatycznie. Mamy title i description o typie text, location jest punktem (x,y), który można osadzić na mapie, price to cena - double. Tyle na teraz wystarczy.
@@ -98,6 +99,7 @@ W Elasticu nasz “scheme” definiujemy za pomocą mappingów. Określamy w nic
 
 Zapisujemy poniższą składnię w pliku offer_mapping.json. Umożliwi to nam stworzenie indeksu. Wykorzystamy go za chwile. 
 
+```json
 {
     "mappings": {
         "properties": {
@@ -116,6 +118,7 @@ Zapisujemy poniższą składnię w pliku offer_mapping.json. Umożliwi to nam st
       }
     }
 }
+```
 
 Wykonujemy komendę, tworząc tym samym nowy index.
 
@@ -125,9 +128,16 @@ curl -H "Content-Type: application/json" -X PUT http://localhost:3000/offers --d
 
 W dalszej części do wykonywania requestów będę już używać devtoolsów w kibanie, bo będzie czytelniej. Jeśli nie chcesz tego używać i wolisz CLI, z łatwością wykonasz requesty np. curlem, jak powyżej.
 
+
+
+#### Kibana Devtools
+![Tak wyglądają devtoolsy](/images/posts/elasticsearch-zapytania/elasticsearch-1.png "Tak wyglądają devtoolsy")
+
+
 ### Feedowanie danych
 Poniżej mini-zbiór danych do sprawdzenia, jak to działa.
-```
+
+```json
 POST offers/_doc
 {
               "title": "skarpety rozmiar 36",
@@ -164,14 +174,10 @@ POST offers/_doc
 }
 ```
 
-[![Tak wyglądają devtoolsy](link.xd "Tak wyglądają devtoolsy")](link.xd "Tak wyglądają devtoolsy")
-
-Teraz możemy wykonać zapytania o to, czego potrzebujemy.
-
 ### Scenariusze z życia wzięte:
 #### Użytkownik wyszukuje pełnotekstowo po tytule oferty:
 
-```
+```json
 GET offers/_search
 {
   "query": {
@@ -183,7 +189,8 @@ GET offers/_search
 ```
 
 Odpowiedź z serwera, widzimy znaleziony rekord, ponieważ w tytule zawarte jest słowo "skarpetki":
-``` 
+
+```json 
 {
   "took" : 1,
   "timed_out" : false,
@@ -226,7 +233,7 @@ Ustalamy:
 * gte (greater than or equal) - większe lub równe 10, 
 * lte (lower than or equal) - mniejsze lub równe 20
 
-```
+```json
 GET offers/_search
 {
     "query": {
@@ -242,7 +249,8 @@ GET offers/_search
 ```
 
 Znalezione 2 oferty, z ceną większą niż 10 ale mniejszą niż 20.
-```
+
+```json
 {
   "took" : 1,
   "timed_out" : false,
@@ -297,7 +305,7 @@ Znalezione 2 oferty, z ceną większą niż 10 ale mniejszą niż 20.
 #### Szukanie po lokalizacji:
 Chcemy znaleźć oferty w promieniu 100km od miejscowości o współrzędnych [-70.001, 40.002]
 
-```
+```json
 GET offers/_search
 {
     "query": {
@@ -317,7 +325,7 @@ GET offers/_search
 ```
 
 Odpowiedź z serwera:
-```
+```json
 {
   "took" : 1,
   "timed_out" : false,
@@ -357,7 +365,8 @@ Znalazło 1 rekord o współrzędnych [-70, 40].
 
 #### Wyszukiwanie również w opisie
 Mamy 1 rekord, który w tytule ma "skarpety" a w opisie "skarpetki". Chcemy go wyszukać po opisie. Ogólnie da się skonfigurować, żeby wyszukiwało pochodne słowa od skarpety, ale to może w innym poście :)
-```
+
+```json
 GET offers/_search
 {
   "query": {
@@ -370,7 +379,8 @@ GET offers/_search
 ```
 
 No i mamy znalezione skarpetki.
-```
+
+```json
 {
   "took" : 0,
   "timed_out" : false,
