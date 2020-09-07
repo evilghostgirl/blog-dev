@@ -2,13 +2,14 @@
 title: "Elasticsearch - kilka praktycznych przykładów wyszukiwań"
 slug: elasticsearch-searching
 description: "Przykłady zapytań do elasticsearcha"
-date: 2020-04-30 15:56:24
+date: 2020-09-07 22:56:24
 author: Julia
 tags:
     - elk
     - elasticsearch
     - data
     - database
+cover: /images/posts/elasticsearch-zapytania/searching.jpg
 
 
 ---
