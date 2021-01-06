@@ -38,7 +38,7 @@
       <div class=" post-info-box">
           <div class="is-pulled-left has-padding-right-10">
             <figure class="image is-48x48" v-if="post.author">
-              <g-image class="is-rounded" src="@/assets/images/avatarLg.jpg"  alt="X"/>
+              <g-image class="is-rounded" src="@/assets/images/avatarLg.jpeg"  alt="X"/>
             </figure>
           </div>
 

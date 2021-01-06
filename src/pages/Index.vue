@@ -10,7 +10,7 @@
             <p class="subtitle has-padding-top-15">Blog o moich samodzielnych zmaganiach z nauką z różnych dziedzin IT. </p>
             <g-link to="/author/Julia" class="button is-black is-rounded " >O mnie</g-link>
           </div>
-          <div class="column has-text-right has-padding-top-60-mobile"><g-image src="@/assets/images/avatarLg.jpg" alt=""/></div>
+          <div class="column has-text-right has-padding-top-60-mobile"><g-image src="@/assets/images/avatarLg.jpeg" alt=""/></div>
         </div>
       </div>
     </section>

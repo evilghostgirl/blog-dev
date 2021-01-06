@@ -8,7 +8,7 @@
           <div class="columns  is-centered ">
             <div class="column is-half-desktop has-column-centered has-text-centered">
               <figure class="image is-128x128 is-centered">
-                <g-image class="is-rounded" src="@/assets/images/avatarLg.jpg" alt="" />
+                <g-image class="is-rounded" src="@/assets/images/avatarLg.jpeg" alt="" />
               </figure>
 
               <h1 class="title is-size-3 has-padding-top-20">

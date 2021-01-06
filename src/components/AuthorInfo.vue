@@ -5,7 +5,7 @@
       <div class="media-left">
       <figure class="image is-48x48">
         <g-link :to="`${author.path}/`">
-          <g-image class="is-rounded" src="@/assets/images/avatarLg.jpg" :alt="author.title"/>
+          <g-image class="is-rounded" src="@/assets/images/avatarLg.jpeg" :alt="author.title"/>
         </g-link>
       </figure>
       </div>
