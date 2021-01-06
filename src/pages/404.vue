@@ -1,6 +1,6 @@
 <template>
   <Layout class="">
-
+    <jNavbar/>
     <section class="hero is-fullheight">
     <navigation-back/>
 
@@ -16,6 +16,7 @@
 
 <script>
 import NavigationBack from '@/components/NavigationBack'
+import JNavbar from '@/components/JNavbar'
 export default {
   metaInfo () {
     return {
@@ -23,7 +24,8 @@ export default {
     }
   },
   components: {
-    NavigationBack
+    NavigationBack,
+    JNavbar
   }
 }
 </script>

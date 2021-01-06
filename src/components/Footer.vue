@@ -1,25 +1,27 @@
 <template>
-
-
-    <footer class="footer has-background-white p-t-xl">
-      <div class="container">
-        <div class="level">
-          <div class="level-left">
-            <div class="level-item"><a class="title is-4" href="#">Autodydaktycznie Blog</a></div>
-          </div>
-          <div class="level-right"><g-link to="/author/Julia" class="level-item">Autor</g-link>
-         
-          </div>
+  <footer class="footer has-background-black p-t-xl">
+    <div class="container">
+      <div class="columns">
+        <div class="column has-text-left">
+          <a class="title is-4 has-text-grey" href="#">Autodydaktycznie Blog</a> <br />
+          <p class="is-family-monospace	pt-5"> 
+              Wynalazca to człowiek, który pyta wszechświat: "Dlaczego?" 
+              i nie pozwala,
+              by cokolwiek stanęło między odpowiedzią 
+              a jego umysłem. ~ "Atlas Shrugged", Ayn Rand</p>
+          <p class="pt-5">
+            <g-link to="/author/Julia">O Autorce</g-link>
+          </p>
+          <p class="pt-1">
+            <g-link to="https://www.linkedin.com/in/julia-glaszka/" class="mt-5">LinkedIn</g-link>
+          </p>
         </div>
-        <hr>
-        <div class="columns">
-
-          <div class="column has-text-centered has-text-right-tablet">
-            <p class="subtitle is-6">© 2020 - MIT License</p>
-          </div>
+        <div class="column has-text-centered has-text-right-tablet">
+          <p class="subtitle is-5"><span class="copyleft">&copy;</span> evilghostgirl</p>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -28,3 +30,11 @@
   }
 
 </script>
+
+<style>
+  .copyleft {
+    display: inline-block;
+    transform: rotate(180deg);
+  }
+
+</style>

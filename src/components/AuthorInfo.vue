@@ -5,7 +5,7 @@
       <div class="media-left">
       <figure class="image is-48x48">
         <g-link :to="`${author.path}/`">
-          <g-image class="is-rounded" src="@/assets/images/Julia.png" :alt="author.title"/>
+          <g-image class="is-rounded" src="@/assets/images/avatarLg.jpg" :alt="author.title"/>
         </g-link>
       </figure>
       </div>
@@ -17,9 +17,8 @@
       </div>
     </div>
 
-    <div class="content">
-        {{$static.metadata.aboutAuthor}}
-
+    <div class="content" v-for="line in $static.metadata.shortAboutAuthor" >
+        <p> {{line}} </p>
     </div>
   </div>
     <footer class="card-footer">
@@ -32,7 +31,6 @@
 <script>
 export default {
     props: ['author']
-
 }
 </script>
 
@@ -42,7 +40,7 @@ export default {
 <static-query>
 query {
   metadata {
-    aboutAuthor
+    shortAboutAuthor
   }
 }
 </static-query>

@@ -1,7 +1,7 @@
 ---
-title: "Elasticsearch - kilka praktycznych przykładów wyszukiwań"
+title: "Elasticsearch - to nie tylko logi."
 slug: elasticsearch-searching
-description: "Przykłady zapytań do elasticsearcha"
+description: "Elasticsearch - nie tylko logi"
 date: 2020-09-07 22:56:24
 author: Julia
 tags:
@@ -14,8 +14,6 @@ cover: /images/posts/elasticsearch-zapytania/searching.jpg
 
 ---
 
-W dzisiejszym wpisie poruszę tematykę elasticsearch.  Jesli nie znasz tej technologii, zapraszam do przeczytania Getting Started zanim zaczniesz czytać ten post. 
-## Wstęp
 Elasticsearch to zaawansowany silnik wyszukiwań a jednocześnie baza danych pozwalająca na przechowywanie różnych typów danych. Wykorzystywana jest głównie przy komercyjnych wyszukiwarkach oraz przy gromadzeniu logów systemowych. Dzięki Elasticsearch, możesz wykonywać skomplikowane wyszukiwania, filtry i agregacje, a także wykorzystywać słowniki.
 ### Wstępne ustalenia
 Ogólnie myślę, że sensownie będzie zapisywać działania do plików, dzięki czemu będzie łatwiej zrekonstruować listę kroków. Warto utworzyć tworzyć osobny katalog na czas ćwiczeń. Całość prawdopodobnie złożę jako projekt na githubie, więc będzie dostępny do sklonowania. 

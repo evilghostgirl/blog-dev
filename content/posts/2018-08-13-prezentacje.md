@@ -7,7 +7,7 @@ author: Julia
 tags:
     - design
     - marketing
-cover: /images/posts/prezentacje/1.png
+cover: /images/posts/prezentacje/1.jpg
 ---
 
 ## Twój szef każe Ci stworzyć prezentację na temat waszej firmy. Znowu! Rwiesz wlosy z głowy, bo wiesz, jaka to czasochłonna i męcząca praca.  

@@ -1,10 +1,6 @@
 <template>
   <Layout class="bg-white">
-    <nav class="navbar">
-      <div class="container has-text-centered has-padding-bottom-10 has-padding-top-15">
-        <a class="navbar-item has-text-weight-semibold has-text-black-bis	" href="/">Julia Glaszka</a>
-      </div>
-    </nav>
+    <jNavbar/>
     <section class="section">
       <div class="container">
         <div class="columns is-vcentered">
@@ -14,13 +10,13 @@
             <p class="subtitle has-padding-top-15">Blog o moich samodzielnych zmaganiach z nauką z różnych dziedzin IT. </p>
             <g-link to="/author/Julia" class="button is-black is-rounded " >O mnie</g-link>
           </div>
-          <div class="column has-text-right has-padding-top-60-mobile"><g-image src="~/assets/images/Julia.png" alt=""/></div>
+          <div class="column has-text-right has-padding-top-60-mobile"><g-image src="@/assets/images/avatarLg.jpg" alt=""/></div>
         </div>
       </div>
     </section>
-  <div class="container">
-    <hr>
-  </div>
+    <div class="container">
+      <hr>
+    </div>
 
 
     <main class="section">
@@ -35,11 +31,8 @@
        <pagination :info="$page.posts.pageInfo" v-if="$page.posts.pageInfo.totalPages > 1" />
 
 
-    <div class="section">
-      <div class="container">
-        <site-footer class="has-padding-top-10 has-padding-bottom-10" />
-      </div>
-     </div>
+        <site-footer/>
+
   </Layout>
 </template>
 
@@ -48,18 +41,20 @@
   import PostItem from '@/components/PostItem'
   import Pagination from '@/components/Pagination'
   import Posts from '@/components/Posts'
+  import JNavbar from '@/components/JNavbar'
 
   export default {
     components: {
       PostItem,
       Pagination,
       SiteFooter,
-      Posts
+      Posts,
+      JNavbar
     },
     metaInfo() {
       return {
         title: this.$static.metadata.siteName,
-
+        avatar: this.$static.metadata.avatarLg
       }
     }
   }
@@ -113,6 +108,10 @@
 <style> 
 .card-image > a >.g-image {
   width: 100%;
+}
+
+.navbar-brand {
+  justify-content: center;
 }
 
 </style>

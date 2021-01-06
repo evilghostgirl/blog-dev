@@ -1,5 +1,6 @@
 <template>
   <Layout>
+  <JNavbar/>
 
     <post-header :post="$page.post" />
 
@@ -30,6 +31,7 @@
   import SiteFooter from '@/components/Footer'
   import PostHeader from '~/components/PostHeader'
   import PostFooter from '~/components/PostFooter'
+  import JNavbar from '@/components/JNavbar'
 
 
   export default {
@@ -38,6 +40,7 @@
       PostFooter,
       PostHeader,
       SiteFooter,
+      JNavbar
     },
     methods: {
       description(post, length, clamp) {

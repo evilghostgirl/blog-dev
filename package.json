@@ -17,7 +17,7 @@
     "medium-zoom": "^1.0.5"
   },
   "devDependencies": {
-    "bulma": "^0.8.0",
+    "bulma": "^0.9.0",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "postcss-import": "^12.0.1",

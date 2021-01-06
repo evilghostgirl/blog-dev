@@ -1,5 +1,5 @@
 <template>
-  <div class="column is-half-tablet is-one-third-desktop m-t-md m-b-md p-l-md p-r-md">
+  <div class="column is-half-tablet is-one-third-desktop">
     <!-- Card start -->
     <div class="card" style="height: 100%">
 
@@ -23,8 +23,8 @@
 
 
           <!-- tags -->
-          <span v-if="post.tags && post.tags.length > 0">
-            <g-link :to="`${post.tags[0].path}/`" class="">
+          <span v-if="post.tags && post.tags.length > 0" class="tag is-rounded">
+            <g-link :to="`${post.tags[0].path}/`" class="has-text-grey">
               #{{ titleCase(post.tags[0].title) }}
             </g-link>
           </span>
@@ -38,7 +38,7 @@
       <div class=" post-info-box">
           <div class="is-pulled-left has-padding-right-10">
             <figure class="image is-48x48" v-if="post.author">
-              <g-image class="is-rounded" src="@/assets/images/Julia.png"  alt="X"/>
+              <g-image class="is-rounded" src="@/assets/images/avatarLg.jpg"  alt="X"/>
             </figure>
           </div>
 

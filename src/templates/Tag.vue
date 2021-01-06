@@ -1,5 +1,6 @@
 <template>
   <Layout>
+  <jNavbar/>
     <main>
       <navigation-back />
       <header class="section">
@@ -43,6 +44,7 @@
   import SiteFooter from '@/components/Footer'
   import Pagination from '@/components/Pagination'
   import NavigationBack from '@/components/NavigationBack'
+  import JNavbar from '@/components/JNavbar'
 
   export default {
     components: {
@@ -50,7 +52,8 @@
       Pagination,
       SiteFooter,
       NavigationBack,
-      Posts
+      Posts,
+      JNavbar
     },
 
     methods: {
@@ -61,9 +64,6 @@
     computed: {
       config() {
         return config
-      },
-      ogImageUrl() {
-        return `${this.config.siteUrl}/images/bleda-card.png`
       }
     },
   }
